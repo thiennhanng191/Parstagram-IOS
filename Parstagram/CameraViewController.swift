@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -22,6 +23,27 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {
+        let post = PFObject(className: "Posts") // if the Posts table does not exist => automatically create it
+        
+        post["caption"] = commentField.text!
+        post["author"] = PFUser.current()
+        
+        // imageView.image is the reduced-size image that user uploaded
+        // pngData() will return binary content of it
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        
+        post["image"] = file
+        
+        post.saveInBackground { (success, error) in
+            if success {
+                print("saved!")
+                // dismiss the current CameraView
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                print("error!")
+            }
+        }
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
@@ -48,7 +70,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         imageView.image = scaledImage
         
-        // dismiss CameraView
+        // dismiss the current CameraView
         dismiss(animated: true, completion: nil)
         
     }
