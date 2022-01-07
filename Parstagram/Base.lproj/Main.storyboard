@@ -100,6 +100,59 @@
                     <view key="view" contentMode="scaleToFill" id="00v-Tr-ZWX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yc9-ZA-Oal">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCellTableViewCell" rowHeight="425" id="jPn-Vm-Dmz" customClass="PostCellTableViewCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="425"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jPn-Vm-Dmz" id="PGe-NX-eyt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="425"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fTf-WP-pWH">
+                                                    <rect key="frame" x="0.0" y="8" width="414" height="370"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="fTf-WP-pWH" secondAttribute="height" multiplier="207:185" id="QeV-Uz-bGn"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGs-YR-zU4">
+                                                    <rect key="frame" x="20" y="386" width="40" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="This is a caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vp-tY-HLV">
+                                                    <rect key="frame" x="68" y="386" width="318" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GGs-YR-zU4" firstAttribute="leading" secondItem="PGe-NX-eyt" secondAttribute="leadingMargin" id="1fl-rU-ZqG"/>
+                                                <constraint firstItem="GGs-YR-zU4" firstAttribute="top" secondItem="fTf-WP-pWH" secondAttribute="bottom" constant="8" id="2D3-HH-AFw"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="3Vp-tY-HLV" secondAttribute="bottom" constant="8" id="2us-yj-zhi"/>
+                                                <constraint firstItem="3Vp-tY-HLV" firstAttribute="top" secondItem="fTf-WP-pWH" secondAttribute="bottom" constant="8" id="AVc-5D-CAS"/>
+                                                <constraint firstItem="fTf-WP-pWH" firstAttribute="top" secondItem="PGe-NX-eyt" secondAttribute="top" constant="8" id="YBU-oq-hG7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3Vp-tY-HLV" secondAttribute="trailing" constant="8" id="fFH-PW-Sny"/>
+                                                <constraint firstItem="fTf-WP-pWH" firstAttribute="leading" secondItem="PGe-NX-eyt" secondAttribute="leading" id="ni0-E2-nyQ"/>
+                                                <constraint firstItem="3Vp-tY-HLV" firstAttribute="leading" secondItem="GGs-YR-zU4" secondAttribute="trailing" constant="8" id="ptk-Xq-9kI"/>
+                                                <constraint firstAttribute="trailing" secondItem="fTf-WP-pWH" secondAttribute="trailing" id="xCD-sS-iOs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="3Vp-tY-HLV" id="f2g-kA-NbE"/>
+                                            <outlet property="photoView" destination="fTf-WP-pWH" id="07k-48-p7X"/>
+                                            <outlet property="usernameLabel" destination="GGs-YR-zU4" id="oEb-ZF-1w1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hFg-ju-zbd"/>
                     </view>
@@ -110,6 +163,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="yc9-ZA-Oal" id="AV4-HF-hah"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1l-Is-MCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
