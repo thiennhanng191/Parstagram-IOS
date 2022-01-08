@@ -22,11 +22,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        loadPosts()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        loadPosts()
+    }
+    
+    func loadPosts() {
         let query = PFQuery(className: "Posts")
         query.includeKey("author")
         query.limit = queryLimit
@@ -34,7 +40,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         query.findObjectsInBackground {
             (posts, error) in
             if posts != nil {
-                self.posts = posts!
+                self.posts.removeAll()
+                           
+                for post in posts! {
+                    self.posts.insert(post, at: 0)
+                }
+                
                 self.tableView.reloadData()
             }
         }
@@ -43,17 +54,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func loadMorePosts() {
         self.queryLimit += 5
         
-        let query = PFQuery(className: "Posts")
-        query.includeKey("author")
-        query.limit = queryLimit
-        
-        query.findObjectsInBackground {
-            (posts, error) in
-            if posts != nil {
-                self.posts = posts!
-                self.tableView.reloadData()
-            }
-        }
+        loadPosts()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
