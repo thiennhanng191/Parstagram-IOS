@@ -14,6 +14,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [PFObject]()
+    var queryLimit = 5
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,23 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let query = PFQuery(className: "Posts")
         query.includeKey("author")
-        query.limit = 20
+        query.limit = queryLimit
+        
+        query.findObjectsInBackground {
+            (posts, error) in
+            if posts != nil {
+                self.posts = posts!
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func loadMorePosts() {
+        self.queryLimit += 5
+        
+        let query = PFQuery(className: "Posts")
+        query.includeKey("author")
+        query.limit = queryLimit
         
         query.findObjectsInBackground {
             (posts, error) in
@@ -58,6 +76,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.photoView.af_setImage(withURL: url)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == posts.count {
+            loadMorePosts()
+        }
     }
 
     /*
