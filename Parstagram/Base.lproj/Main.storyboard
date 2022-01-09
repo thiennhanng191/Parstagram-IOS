@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram_logo" translatesAutoresizingMaskIntoConstraints="NO" id="TGM-r5-b07">
-                                <rect key="frame" x="80" y="224" width="255" height="108"/>
+                                <rect key="frame" x="80" y="224" width="254" height="108"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mcH-2t-3DW">
-                                <rect key="frame" x="60" y="372" width="295" height="40"/>
+                                <rect key="frame" x="60" y="372" width="294" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4l5-ak-xJA"/>
                                 </constraints>
@@ -27,7 +27,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSc-HF-0Ah">
-                                <rect key="frame" x="60" y="432" width="295" height="40"/>
+                                <rect key="frame" x="60" y="432" width="294" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5i5-k5-ZXr"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="X8Y-Ne-ZLs"/>
@@ -36,7 +36,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ma-jR-n0q">
-                                <rect key="frame" x="60" y="492" width="295" height="30"/>
+                                <rect key="frame" x="60" y="492" width="294" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.59215686270000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="bzi-nx-Cj9"/>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owf-Nw-gli">
-                                <rect key="frame" x="60" y="532" width="295" height="30"/>
+                                <rect key="frame" x="60" y="532" width="294" height="30"/>
                                 <state key="normal" title="Create New Account">
                                     <color key="titleColor" red="0.0" green="0.59215686270000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -243,7 +243,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Vch-ub-EeI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="qra-iY-Pek" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="qra-iY-Pek" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0ug-Oq-YfX">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
