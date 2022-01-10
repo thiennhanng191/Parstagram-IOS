@@ -38,9 +38,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ma-jR-n0q">
                                 <rect key="frame" x="60" y="492" width="294" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.59215686270000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="bzi-nx-Cj9"/>
-                                </constraints>
                                 <state key="normal" title="Log Into Existing Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -148,6 +145,41 @@
                                             <outlet property="captionLabel" destination="3Vp-tY-HLV" id="f2g-kA-NbE"/>
                                             <outlet property="photoView" destination="fTf-WP-pWH" id="07k-48-p7X"/>
                                             <outlet property="usernameLabel" destination="GGs-YR-zU4" id="oEb-ZF-1w1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" id="1PX-MJ-Psx" customClass="CommentCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="453" width="414" height="47.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1PX-MJ-Psx" id="jcM-Ll-wx3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="47.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="not_nhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXO-t0-k7g">
+                                                    <rect key="frame" x="20" y="15" width="70" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7H-IK-EZx">
+                                                    <rect key="frame" x="98" y="15" width="288" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="r7H-IK-EZx" secondAttribute="trailing" constant="8" id="3ng-12-U5f"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="r7H-IK-EZx" secondAttribute="bottom" constant="12" id="GNW-7k-Shp"/>
+                                                <constraint firstItem="r7H-IK-EZx" firstAttribute="top" secondItem="jcM-Ll-wx3" secondAttribute="topMargin" constant="4" id="JsL-u4-UjT"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DXO-t0-k7g" secondAttribute="bottom" constant="12" id="Q7N-hb-eZg"/>
+                                                <constraint firstItem="DXO-t0-k7g" firstAttribute="top" secondItem="jcM-Ll-wx3" secondAttribute="topMargin" constant="4" id="SYG-5V-835"/>
+                                                <constraint firstItem="DXO-t0-k7g" firstAttribute="leading" secondItem="jcM-Ll-wx3" secondAttribute="leadingMargin" id="YTR-T7-EU1"/>
+                                                <constraint firstItem="r7H-IK-EZx" firstAttribute="leading" secondItem="DXO-t0-k7g" secondAttribute="trailing" constant="8" id="vj2-Eo-1S9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="r7H-IK-EZx" id="vxJ-bl-qcC"/>
+                                            <outlet property="nameLabel" destination="DXO-t0-k7g" id="Kc8-m4-StQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

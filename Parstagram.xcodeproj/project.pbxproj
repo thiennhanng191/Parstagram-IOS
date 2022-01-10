@@ -18,6 +18,7 @@
 		D77EB15C2788AB00000691C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77EB15A2788AB00000691C7 /* Main.storyboard */; };
 		D77EB15E2788AB01000691C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D77EB15D2788AB01000691C7 /* Assets.xcassets */; };
 		D77EB1612788AB01000691C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77EB15F2788AB01000691C7 /* LaunchScreen.storyboard */; };
+		D7E125C3278BEC760021CBF8 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E125C2278BEC760021CBF8 /* CommentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		D77EB15D2788AB01000691C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D77EB1602788AB01000691C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D77EB1622788AB01000691C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7E125C2278BEC760021CBF8 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		D902A996A4E69ED4881C46CC /* Pods-Parstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parstagram.debug.xcconfig"; path = "Target Support Files/Pods-Parstagram/Pods-Parstagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 				D70AC5542788B5B6007AACC1 /* FeedViewController.swift */,
 				D72E83FE2788E4BE0070D905 /* CameraViewController.swift */,
 				D72E84002788FC780070D905 /* PostCellTableViewCell.swift */,
+				D7E125C2278BEC760021CBF8 /* CommentCell.swift */,
 			);
 			path = Parstagram;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				D70AC5512788B098007AACC1 /* Constant.swift in Sources */,
 				D72E84012788FC780070D905 /* PostCellTableViewCell.swift in Sources */,
 				D72E83FF2788E4BE0070D905 /* CameraViewController.swift in Sources */,
+				D7E125C3278BEC760021CBF8 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
