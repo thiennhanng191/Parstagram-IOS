@@ -74,8 +74,8 @@
 			children = (
 				D77EB1532788AB00000691C7 /* Parstagram */,
 				D77EB1522788AB00000691C7 /* Products */,
-				6B3507B51E8AB04210C71D02 /* Pods */,
 				1788659B36772CA9550C3BFD /* Frameworks */,
+				6B3507B51E8AB04210C71D02 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
