@@ -106,7 +106,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row + 1 == posts.count {
+        if indexPath.section + 1 == posts.count {
             loadMorePosts()
         }
     }
